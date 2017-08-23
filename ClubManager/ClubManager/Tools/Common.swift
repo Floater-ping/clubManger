@@ -28,6 +28,10 @@ let pNavigationBarColor : UIColor = UIColor(r: 40, g: 39, b: 43)
 /// 线的颜色
 let pLineColor : UIColor = UIColor(hexColor: "D7D7D7")
 
+
+/// 黄色
+let pYellowColor : UIColor = UIColor(hexColor: "EDC60A")
+
 /// 线宽
 let pLineWidth : CGFloat = 0.5
 
