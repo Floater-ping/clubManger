@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class BaseNavigationController: UINavigationController {
     
     override func viewDidLoad() {
@@ -42,7 +41,15 @@ class BaseNavigationController: UINavigationController {
         panGes.addTarget(target, action: action)
         
         configNaviBar()
-      
+        
+        //        let viewArr : [UIView] = UINavigationBar.appearance().n.subviews
+        //
+        //        for  vi in viewArr {
+        //            if (vi.isKind(of: UIView.classForCoder()) && vi.frame.size.height == 1) {
+        //                vi.backgroundColor = UIColor.red
+        //            }
+        //        }
+        
         
         
     }
@@ -60,7 +67,7 @@ class BaseNavigationController: UINavigationController {
 }
 
 extension BaseNavigationController {
-
+    
     func configNaviBar() {
         /// 设置导航条颜色
         UINavigationBar.appearance().barTintColor = pNavigationBarColor
@@ -71,5 +78,23 @@ extension BaseNavigationController {
         /// 设置导航栏字体颜色
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 18.0)]
+        
+        
+        navigationBar.setBackgroundImage(imageFromColor(UIColor(r: 40, g: 39, b: 43)), for: UIBarPosition(rawValue: 0)!, barMetrics: UIBarMetrics.default)
+        navigationBar.shadowImage = UIImage()
     }
+    
+    
+    //纯色转图片
+    func imageFromColor(_ color: UIColor) -> UIImage {
+        let rect : CGRect = CGRect(x: 0, y: 0, width: pScreenWidth, height: pNavigationBarH+pStatusBarH)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()!
+        
+        
+        context.setFillColor(color.cgColor)
+        let image : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        return image
+    }
+    
 }

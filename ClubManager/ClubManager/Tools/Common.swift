@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SnapKit
+
+
 /// 电池栏高度
 let pStatusBarH : CGFloat = 20
 /// 导航条高度
@@ -21,3 +24,11 @@ let pScreenHeight : CGFloat = UIScreen.main.bounds.height
 
 /// 导航条颜色
 let pNavigationBarColor : UIColor = UIColor(r: 40, g: 39, b: 43)
+
+/// 线的颜色
+let pLineColor : UIColor = UIColor(hexColor: "D7D7D7")
+
+/// 线宽
+let pLineWidth : CGFloat = 0.5
+
+
