@@ -63,7 +63,8 @@ extension LoginViewController {
         bgView.snp_makeConstraints { (make) in
             let _ = make.left.equalTo(20)
             let _ = make.right.equalTo(-20)
-            let _ = make.top.height.equalTo(100)
+            let _ = make.top.equalTo(100)
+            let _ = make.top.height.equalTo(90)
         }
         
         
@@ -77,7 +78,8 @@ extension LoginViewController {
         bgView.addSubview(accountLabel)
         accountLabel.snp_makeConstraints { (make) in
             let _ = make.width.equalTo(50)
-            let _ = make.left.top.equalTo(10)
+            let _ = make.top.equalTo(15)
+            let _ = make.left.equalTo(10)
         }
         
         bgView.addSubview(nameTextField)
@@ -96,7 +98,7 @@ extension LoginViewController {
         passwordLabel.snp_makeConstraints { (make) in
             let _ =  make.width.equalTo(accountLabel.snp_width)
             let _ =  make.left.equalTo(accountLabel.snp_left)
-            let _ =  make.bottom.equalTo(-10)
+            let _ =  make.bottom.equalTo(-15)
         }
         
         bgView.addSubview(passwordTextField)
